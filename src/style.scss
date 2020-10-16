@@ -1,0 +1,150 @@
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  margin: 0;
+  background-color: #8ac764;
+  color: white;
+}
+
+#root {
+  height: 100%;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login,
+.chat {
+  position: relative;
+  width: 40%;
+  padding: 30px 30px 50px 30px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  color: #222;
+  text-align: center;
+  overflow: hidden;
+}
+
+.chat {
+  height: 76%;
+  .user-list {
+    height: 40px;
+    line-height: 40px;
+    text-align: left;
+    background-color: #eee;
+    margin: -30px -30px 30px -30px;
+    padding: 0 15px;
+  }
+  .message-list {
+    height: calc(100% - 80px);
+    text-align: left;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    overflow-y: auto;
+    .message {
+      clear: both;
+      background-color: #eee;
+      margin: 10px;
+      padding: 10px;
+      width: 50%;
+      border-radius: 5px;
+      font-size: 0.9em;
+      &.owner {
+        float: right;
+        background-color: #8ac764;
+        color: white;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .message-box {
+    position: absolute;
+    bottom: 0;
+    height: 40px;
+    width: 100%;
+    line-height: 40px;
+    padding: 5px 0;
+    margin: 30px -30px 0 -30px;
+    background-color: #eee;
+    form {
+      display: flex;
+      align-items: stretch;
+      input {
+        border: none;
+      }
+      .message-text {
+        flex: 7 0;
+        input {
+          width: 90%;
+        }
+      }
+      .send-button {
+        flex: 1 0;
+        padding-right: 10px;
+        input {
+          font-size:.9em;
+          width: 95%;
+          background-color: #15c731;
+          color: white;
+          border: none;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+h1 {
+  color: #15c731;
+}
+
+input {
+  padding: 8px 5px;
+  border-radius: 5px;
+  border: 2px solid #797979;
+  font-size: 1em;
+  outline: none;
+  &:focus,
+  &:active {
+    border: 2px solid #a9a9a9 !important;
+    outline: none;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.error {
+  font-size: 0.9em;
+  margin: 30px 0 0 0;
+  background-color: #f7d3d3;
+  color: red;
+  padding: 15px;
+  &.fixed {
+    width: 100%;
+    position: absolute;
+    top: 40%;
+    left: 0;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .login,
+  .chat {
+    width: 100%;
+    height: calc(100% - 80px);
+    border-radius: 0;
+  }
+}
