@@ -6,9 +6,9 @@ You need to run Node Express Server first. After cloning the repository, open yo
 
 ### `node server.js`
 
-Then you need to instal node packages. At the project root, run the command below on your terminal.
+Then you need to install node packages. At the project root, run the command below via your terminal.
 
-### `yarn start`
+### `yarn`
 
 or
 
